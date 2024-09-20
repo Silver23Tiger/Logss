@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}", // Path to your compiled program
+            "args": [], // Any command line arguments
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}", // Current working directory
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", // Use "lldb" if you're using LLDB
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ build active file", // Ensure this matches the label in tasks.json
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb", // Path to your debugger
+            "miDebuggerArgs": "",
+            "stopAtEntry": false
+        }
+    ]
+}
